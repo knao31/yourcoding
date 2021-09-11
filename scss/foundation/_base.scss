@@ -1,0 +1,36 @@
+@charset "utf-8";
+
+$black: #333333;
+$gray: #444444;
+$white: #FFFFFF;
+$back-lightblue: #EEFBFB;
+$lightblue: #3BA6C9;
+$blue: #0C449B;
+$pink: #FA41CC;
+$purple: #6020B0;
+$shadow: #00000029;
+$faq-border: #E5E5E5;
+$work-border: #DDDDDD;
+$back-gray: #F2F2F2;
+$form: #EEFBFB;
+$footer: #F8F8F8;
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap');
+
+// レスポンシブ
+@mixin min {
+    @media (max-width: 424px) {
+        @content;
+    }
+}
+@mixin sp {
+    @media (max-width: 599px) {
+        @content;
+    }
+}
+@mixin tb {
+    @media (max-width: 1024px) {
+        @content;
+    }
+}
+

@@ -1,0 +1,141 @@
+.contact {
+    padding-top: 63px;
+    padding-bottom: 70px;
+    background: linear-gradient(90deg, #05A5FA 0%, #63FBD7 100%, #67FFD6 100%);
+    .ja, .en, .contact-text {
+        color: $white;
+    }
+    @include sp {
+        padding-top: 100px;
+    }
+}
+
+.contact-text {
+    line-height: 1.5;
+    text-align: center;
+    margin-top: 36px;
+}
+
+.contact-form {
+    line-height: 1.625;
+    width: percentage(908 / 1366);
+    background-color: $white;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 44px;
+    box-shadow: 0 3px 6px $shadow;
+    @include sp {
+        width: 90%;
+    }
+}
+
+.contact-inner {
+    width: 100%;
+    padding: 0 63px;
+    @include tb {
+        padding: 0 30px;
+    }
+}
+
+.form-name {
+    display: flex;
+}
+
+
+.form-title {
+    line-height: 1.625;
+    padding-top: 2px;
+    margin-right: 20px;
+    vertical-align: bottom;
+    @include sp {
+        font-size: 0.8rem;
+        padding-top: 7px;
+    }
+}
+
+.form-add {
+    font-size: 0.875rem;
+    line-height: 1.857;
+    color: $white;
+    background-color: $blue;
+    width: 60px;
+    padding: 4px 16px 4px 16px;
+    border-radius: 10px;
+    @include sp {
+        font-size: 0.8rem;
+    }
+}
+
+.name {
+    padding-top: 34px;
+}
+
+.mail {
+    padding-top: 27px;
+}
+
+.contact-content {
+    padding-top: 21px;
+}
+
+.input-text {
+    background-color: $form;
+    width: percentage(500 / 908);
+    height: 43px;
+    border-radius: 3px;
+    margin-top: 39px;
+    @include tb {
+        height: 30px;
+        margin-top: 30px;
+    }
+    @include sp {
+        width: 80%;
+        margin-top: 20px;
+    }
+}
+
+textarea {
+    background-color: $form;
+    width: percentage(783 / 908);
+    height: 179px;
+    display: block;
+    border-radius: 3px;
+    margin-top: 39px;
+    margin-right: 63px;
+    resize: none;
+    @include sp {
+        width: 90%;
+        margin-top: 20px;
+    }
+}
+
+.checkbox-area {
+    text-align: center;
+    margin-top: 27px;
+    .checkbox {
+        width: 20px;
+        height: 20px;
+        border: 1px solid #707070;
+        margin-bottom: 4px;
+    }
+    p {
+        display: inline-block;
+        line-height: 1.75;
+        margin-left: 10px;
+        @include sp {
+            font-size: 0.8rem;
+        }
+    }
+}
+
+.submit {
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 35px;
+    .btn {
+        padding: 9px 50px 9px 50px;
+        &:disabled {
+            opacity: 0.5;
+        }
+    }
+}

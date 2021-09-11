@@ -1,0 +1,64 @@
+.wrapper {
+    max-width: 1024px;
+    height: 100%;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.common-title {
+    .ja {
+        display: block;
+        font-size: 2rem;
+        line-height: 1.4375;
+        text-align: center;
+        @include sp {
+            font-size: 1.5rem;
+        }
+    }
+
+    .en {
+        display: block;
+        line-height: 1.5;
+        text-align: center;
+        margin-top: 10px;
+        color: $lightblue;
+        @include sp {
+            font-size: 0.9rem;
+            margin-top: 30px;
+        }
+    }
+}
+
+// 改行
+.tb-br {
+    @include tb {
+        display: none;
+    }
+}
+
+.sp-br {
+    display: none;
+    @include sp {
+        display: block;
+    }
+}
+
+span {
+    display: inline-block;
+}
+
+
+// ボタン
+.btn {
+    width: 155px;
+    color: $white;
+    font-size: 0.875rem;
+    line-height: 1.43;
+    padding: 9px 35px;
+    border-radius: 10px;
+    background: linear-gradient(90deg, $pink, $purple);
+    box-shadow: 0 3px 6px $shadow;
+    &:hover {
+        opacity: 0.8;
+    }
+}

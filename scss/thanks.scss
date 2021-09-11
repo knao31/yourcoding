@@ -1,0 +1,48 @@
+@import "foundation/base";
+@import "foundation/general";
+
+
+body {
+    width: 100%;
+    padding: 0;
+}
+
+.wrapper {
+    max-width: 1024px;
+    padding: 0 30px;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+}
+
+.top-image {
+    width: 300px;
+    height: 300px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 30px;
+}
+
+
+h1 {
+    font-size: 1.5rem;
+    line-height: 2;
+    text-align: center;
+    margin-top: 40px;
+    @include sp {
+        font-size: 1.1rem;
+    }
+}
+
+p {
+    text-align: center;
+    margin-top: 40px;
+    line-height: 2;
+    @include sp {
+        font-size: 0.8rem;
+    }
+}
+
+span {
+    display: inline-block;
+}

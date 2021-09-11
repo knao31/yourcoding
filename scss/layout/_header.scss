@@ -1,0 +1,204 @@
+#header {
+    width: 100%;
+    height: 94px;
+    z-index: 900;
+    position: fixed;
+    top: 0;
+    left: 0;
+    box-shadow: 0 3px 6px $shadow;
+    background-color: $white;
+}
+
+.header-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+
+.title {
+    display: flex;
+    align-items: center;
+}
+
+.title-img {
+    width: 47px;
+    height: 47px;
+}
+
+.site-title {
+    font-size: 1.5rem;
+    line-height: 1.458;
+    margin-left: 16px;
+    @include sp {
+        font-size: 1.3rem;
+    }
+    @include min {
+        font-size: 1.1rem;
+    }
+}
+
+
+
+
+// ヘッダーナビ
+.header-nav {
+    @include tb {
+        display: block;
+        width: 100%;
+        height: calc(100% - 94px);
+        position: fixed;
+        top: 94px;
+        padding-top: 145px;
+        background-color: $white;
+        opacity: 0.9;
+        z-index: 30;
+    }
+}
+
+#js-global-menu {
+    @include tb {
+        visibility: hidden;
+        right: -100%;
+        transition: .5s;
+    }
+}
+
+#js-global-menu.open {
+    @include tb {
+        right: 0;
+    }
+}
+
+.nav-list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @include tb {
+        display: block;
+        text-align: center;
+        padding-bottom: 45px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+.nav-item {
+    margin-right: 46px;
+    @include tb {
+        margin-right: auto;
+        margin-left: auto;
+        padding: 25px;
+    }
+    a {
+        line-height: 1.5;
+        @include tb {
+            font-size: 1.3rem;
+        }
+    }
+}
+// ヘッダーナビ終わり
+
+
+
+.header-btn {
+    @include tb {
+        display: none;
+    }
+}
+
+
+
+
+
+// ハンバーガーボタン
+.hamburger-button {
+    display: none;
+    @include tb {
+        display: inline-block;
+        text-decoration: none;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        border: none;
+        background-color: transparent;
+        cursor: pointer;
+    }
+}
+
+
+@include tb {
+    .hamburger {
+        width: 48px;
+        height: 48px;
+        position: fixed;
+        top: 23px;
+        right: 20px;
+        border-radius: 50%;
+        border: 1px solid $black;
+        box-shadow: 0 0 2rem transparent;
+        outline: none;
+        transition: all .3s ease-in-out;
+        z-index: 3;
+        &:hover,
+        &:focus {
+        box-shadow: 0 0 .5rem rgba(161, 161, 161, 0.5);
+        opacity: 0.7;
+        }
+    }
+
+    .hamburger__line {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        margin: auto;
+        width: 18px;
+        height: 2px;
+        background-color: $black;
+        -webkit-transition: inherit;
+                transition: inherit;
+        &::before,
+        &::after {
+            position: absolute;
+            display: block;
+            width: 100%;
+            height: 100%;
+            background-color: inherit;
+            content: '';
+            -webkit-transition: inherit;
+            transition: inherit;
+        }
+    }
+
+    .hamburger__line::before {
+        top: -5px;
+    }
+    .hamburger__line::after {
+        top: 5px;
+    }
+    .hamburger[aria-expanded="true"] {
+        border: 1px solid $black!important;
+    }
+    .hamburger[aria-expanded="true"] .hamburger__line {
+        background-color: $white;
+        &::before,
+        &::after {
+            top: 0;
+            background-color: $black;
+        }
+    }
+    .hamburger[aria-expanded="true"] .hamburger__line::before {
+        -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+        transform: rotate(45deg);
+    }
+
+    .hamburger[aria-expanded="true"] .hamburger__line::after {
+        -webkit-transform: rotate(-45deg);
+        -ms-transform: rotate(-45deg);
+        transform: rotate(-45deg);
+    }
+}
+// ハンバーガー終わり
